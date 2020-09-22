@@ -45,11 +45,12 @@ body {
         background-image: none;
     }
     h2 {
-        //font-family: 'Noto Serif TC', serif;
+        font-family: 'Noto Serif TC', serif;
         font-size: 2.125em;
         line-height: 1.25em;
         letter-spacing: 2px;
         text-align: left;
+        color:$primaryColor;
     }
 
     .col {
