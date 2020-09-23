@@ -55,7 +55,7 @@
                 border-bottom: none;
             }
             &.active>a {
-                background: $primaryColor;
+                background: $secondaryColor;
                 color: #fff;
             }
         }
@@ -63,21 +63,20 @@
             display: block;
             padding: .85em 1.2em;
             text-align: center;
-            background-color: #fff;
-            color: darken($primaryColor, 10);
+            //background-color: #fff;
+            color: $color-word;
             text-decoration: none;
             position: relative;
             transition: all .3s;
-            max-width:130px;
             @include text-overflow;
             @include box-sizing;
             @include screen('mobile'){
                 margin-bottom: .3em;
                 max-width:100%;
-                background-color: $lightColor;
+                background-color: $color-lightGray;
             }
             &:hover {
-                background: $primaryColor;
+                background:$secondaryColor;
                 color:#fff;
             }
         }
@@ -115,7 +114,7 @@
         margin: 0;
         padding: .9em .5em;
         line-height: 1.6;
-        border-bottom: 1px $color-gray solid;
+        border-bottom: 1px $primaryColor solid;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;

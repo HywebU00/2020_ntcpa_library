@@ -1,4 +1,4 @@
-$function_color:#888;
+$function_color:$color-lightGray;
 //可自訂顏色，或是自帶既有變數，但請注意背景色與字的對比度
 //icon基本設定
 %function_before {
@@ -26,12 +26,13 @@ div.function {
                 padding: .2em 1em;
                 background: $function_color;
                 border-color: $function_color;
-                color: #FFF;
+                color: $color-word;
                 border-radius: 4px;
                 &:hover,
                 &:focus {
                     background: darken($aHover, 0);
                     border-color: darken($aHover, 0);
+                    color:#fff;
                 }
             }
             // 回上一頁

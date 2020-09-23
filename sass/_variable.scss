@@ -16,12 +16,14 @@ $color-red: #ff3e4d;
 $color-yellow: #fcc211;
 $color-purple: #aa5ac5;
 $color-gray: #ccc;
-$color-lightGray: #eee;
+$color-lightGray: #efefef;
 $color-dark: #333333;
 $color-hr: #666; //hr顏色
 $color-word: #020202; //一般字的顏色
+$color-bg: #fff6f1;
+$color-bg-2: #7c9fb0;
 // 連結顏色
-$aColor: $primaryColor;
+$aColor: $secondaryColor;
 $aHover: darken($aColor, 10);
 
 // 表單focus顏色

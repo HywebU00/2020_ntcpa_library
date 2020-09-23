@@ -30,7 +30,7 @@ body {
 
 // 整體共用container樣式，請注意首頁切版頁面的整齊
 .container {
-    padding: 0;
+    @include gutter(0);
     margin: 0 auto;
     max-width: $container-max; //請看_variable.scss
 }
@@ -56,17 +56,20 @@ body {
     .col {
         @include gutter;
     }
-    .news, .recent_activities{
-       padding-left: 3.5em;
-       overflow: hidden;
-       //background-color: #fff;
-       @include screen('mobile'){
-            padding-left:15px;
-       }
-    }
+    // .news, .recent_activities{
+    //    padding-left: 3.5em;
+    //    overflow: hidden;
+    //    //background-color: #fff;
+    //    @include screen('mobile'){
+    //         padding-left:15px;
+    //    }
+    // }
     .reader_service{
         padding-left: 3.5em;
         background:#fff;
+        @include screen('mobile'){
+            padding-left: 0;
+        }
     }
 
 }
@@ -181,37 +184,6 @@ body {
     }
 }
 
-.more {
-    float: right;
-    font-size: .938em;
-    text-align: center;
-    margin-top: 20px;
-    min-width: 100px;
-    @include screen('mobile'){
-        margin-bottom:20px;
-    }
-    &:hover {
-        &:after {
-            transform:scaleX(.7);
-        }
-    }
-    a {
-        color: $primaryColor;
-        vertical-align:middle;
-    }
-
-    &:after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 2px;
-        margin: 2px auto;
-        background-color: #000;
-        transform-origin:50%;
-        transition: all .3s;
-    }
-}
-
 .function_block{
     .container{
         background: $primaryColor;
@@ -269,6 +241,7 @@ body {
         }
     }  
 }
+
 
 // @keyframes more_gogo {
 //     0% {

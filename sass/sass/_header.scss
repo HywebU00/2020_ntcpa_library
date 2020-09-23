@@ -40,6 +40,9 @@
         @include screen('mobile') {
             display: block !important;
         }
+        @media screen and (max-width: 375px){
+            width: 50px !important;
+        }
     }
     >.container {
         max-width: $container-max;
@@ -72,6 +75,9 @@
             right: 60px;
             font-size: 0em;
             @extend %mobileCtrlBtn;
+            @media screen and (max-width: 375px){
+                right:50px;
+            }
             &:before {
                 width: 40px;
                 height: 40px;
@@ -122,6 +128,11 @@
                 transform-origin: left;
             }
         }
+        @media screen and (max-width: 375px){
+            img{
+                transform: scale(.6);
+            }
+        }   
     }
     .nav_block{
         display: flex;
@@ -198,6 +209,11 @@
             &:hover{
                 background-color: #fff;
             }
+        }
+        @media screen and (max-width: 375px) {
+            width: 50px;
+            min-width: 50px;
+            max-width: 50px;
         }
     }
 }
@@ -413,7 +429,7 @@
 .reader_area, .reader_login{
     min-height: 68px;
     background: $color-lightGray;
-    color:#color-word;
+    color:$color-word;
     padding: .8em 1.6em;
     overflow: hidden;
     font-size: .938em;
@@ -426,6 +442,7 @@
     @include screen('mobile') {
         padding: 1.2em 1.6em;
         top:60px;
+        width: 100%;
     }
     .close{
         position: absolute;
