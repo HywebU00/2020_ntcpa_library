@@ -237,6 +237,20 @@
     position: relative;
 }
 
+.news{
+    &:before{
+        content:"";
+        position: absolute;
+        display: block;
+        left: -200px;
+        top:-60px;
+        width:170px;
+        height: 210px;
+        background: url(../images/bg07.png) no-repeat;
+        background-size:contain;
+    }
+}
+
 .select_library{
     position: absolute;
     right: 0;
@@ -426,7 +440,20 @@
 
 .activities{
     .container{
+        position: relative;
         @include gutter();
+        &:before{
+            content:"";
+            position: absolute;
+            display: block;
+            left: -55px;
+            top:50%;
+            z-index: -1;
+            width:170px;
+            height: 170px;
+            background: url(../images/bg08.png) no-repeat;
+            background-size:contain;
+        }
     }
     .activity_block{
         overflow: hidden;
@@ -897,10 +924,24 @@
 
 
 .bg_1{
+    position: relative;
+    padding-top: 1em;
     background: no-repeat left -90px bottom 10px url(../images/bg_f02.png) , 
                 no-repeat left 220px bottom -10px/150px url(../images/bg_f02.png), 
                 no-repeat right -50px bottom -100px url(../images/bg_f04.png) 
                 $lightColor ;
+    &:before{
+        content:"";
+        position: absolute;
+        display: block;
+        left: 50px;
+        top:-90px;
+        z-index: -1;
+        width:180px;
+        height: 180px;
+        background: url(../images/bg08.png) no-repeat;
+        background-size:contain;
+    }
     h2{
         color:#fff;
     }
@@ -935,9 +976,22 @@
 }
 
 .bg_2{
+    position: relative;
     background: no-repeat right 120px bottom 80px/200px url(../images/bg_f01.png), 
                 no-repeat center bottom -60px url(../images/bg_f01.png),
                 $color-bg;
+    &:before{
+        content:"";
+        position: absolute;
+        display: block;
+        right: 5px;
+        bottom:-90px;
+        z-index: -1;
+        width:170px;
+        height: 180px;
+        background: url(../images/bg08.png) no-repeat;
+        background-size:contain;
+    }
 
 }
 

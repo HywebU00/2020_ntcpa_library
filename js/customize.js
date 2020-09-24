@@ -19,7 +19,7 @@ $(function() {
         //centerMode: true,
         //centerPadding: '60px',
         slidesToShow: 1.08,
-        autoplay: true,
+        autoplay: false,
         arrows: false,
         speed: 1500,
         rtl: true,
@@ -28,6 +28,12 @@ $(function() {
                 breakpoint: 1399,
                 settings: {
                     slidesToShow: 1.01
+                }
+            },
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 1
                 }
             },
             {
