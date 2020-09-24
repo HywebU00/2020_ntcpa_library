@@ -5,7 +5,9 @@
 //         padding-bottom: 1em;
 //     }
 // }
+.main{
 
+}
 .mp{
     position: relative;
     &:before{
@@ -17,6 +19,7 @@
         top:0;
         z-index: -1;
         background: no-repeat right top 100px url(../images/bg01.png),
+                    no-repeat right top 43%/96% url(../images/bg03.png),
                     no-repeat right top 75% url(../images/bg05.png);
     }
     &:after{
@@ -196,6 +199,7 @@
             margin:0;
             color:#fff;
             background: $primaryColor;
+            font-family: $font-family;
         }
         .amount{
             display: block;

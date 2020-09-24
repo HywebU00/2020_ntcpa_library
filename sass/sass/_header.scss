@@ -637,6 +637,13 @@
                 >a {
                     color: #FFF;
                 }
+                &.hasChild{
+                    >a{
+                        &:after{
+                            border-color:#fff;
+                        }
+                    }
+                }
             }
         }
     }

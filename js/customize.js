@@ -17,29 +17,32 @@ $(function() {
         // ease: 'ease'
 
         //centerMode: true,
-          //centerPadding: '60px',
-          slidesToShow: 1.08,
-          autoplay: true,
-          arrows: false,
-          speed: 1000,
-          rtl: true,
-          cssEase: 'ease-in-out',
-          responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                arrows: false,
-                slidesToShow: 1
-              }
+        //centerPadding: '60px',
+        slidesToShow: 1.08,
+        autoplay: true,
+        arrows: false,
+        speed: 1500,
+        rtl: true,
+        cssEase: 'ease-out',
+        responsive: [{
+                breakpoint: 1399,
+                settings: {
+                    slidesToShow: 1.01
+                }
             },
             {
-              breakpoint: 480,
-              settings: {
-                arrows: false,
-                slidesToShow: 1
-              }
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1
+                }
             }
-          ]
+        ]
 
         // dots: true,
         //   infinite: true,
@@ -48,6 +51,11 @@ $(function() {
         //   centerMode: true,
         //   variableWidth: false
     });
+    // if($('.mpSlider').find('.slick-current')){
+    //     $('.slick-current').prev().addClass('img-sacle')
+    // }else{
+    //     $('.mpSlider .slick-slide').removeClass('img-sacle');
+    // }
     // 廣告輪播
     $('.adSlider').slick({
         mobileFirst: true,
@@ -68,14 +76,14 @@ $(function() {
                 slidesToScroll: 1,
                 arrows: true
             }
-        },{
+        }, {
             breakpoint: 768,
             settings: {
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 arrows: true
             }
-        },{
+        }, {
             breakpoint: 575,
             settings: {
                 slidesToShow: 3,
@@ -103,28 +111,28 @@ $(function() {
                 slidesToScroll: 1,
                 arrows: true
             }
-        },{
+        }, {
             breakpoint: 992,
             settings: {
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 arrows: true
             }
-        },{
+        }, {
             breakpoint: 768,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 arrows: true
             }
-        },{
+        }, {
             breakpoint: 480,
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 arrows: true
             }
-        },{
+        }, {
             breakpoint: 0,
             settings: {
                 slidesToShow: 1,
@@ -180,7 +188,7 @@ $(function() {
         ease: 'ease',
         lazy: true
     });
-     // cp_photo
+    // cp_photo
     $('.Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
         $('.controls').html(i + '/' + slick.slideCount);
@@ -207,7 +215,7 @@ $(function() {
         infinite: true
     });
 
-    
+
     $('.reader_area').hide();
     // $('.reader_areal').after('<div class="modal_overlay"></div>');
     $('.reader_login').hide();
@@ -229,4 +237,27 @@ $(function() {
     //         $('.reader_area').hide();
     //     });
     // }
+    $('.counter').each(function() {
+        var $this = $(this),
+            countTo = $this.attr('data-count');
+
+        $({ countNum: $this.text() }).animate({
+                countNum: countTo
+            },
+
+            {
+
+                duration: 5000,
+                easing: 'linear',
+                step: function() {
+                    $this.text(Math.floor(this.countNum));
+                },
+                complete: function() {
+                    $this.text(this.countNum);
+                    //alert('finished');
+                }
+
+            });
+
+    });
 });

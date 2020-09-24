@@ -7,9 +7,9 @@
     background: $fatfooterBgColor;
     position: relative;
     z-index: 50;
-    //   @include screen('mobile') {
-    //     display: none;
-    // }
+      @include screen('mobile') {
+        display: none;
+    }
     .container {
         //overflow: hidden;
         @include box-sizing;
