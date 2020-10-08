@@ -2,26 +2,16 @@
 $(function() {
     // 首頁輪播
     $('.mpSlider').slick({
-        // centerMode: true,
-        // centerPadding: '60px',
-        // slidesToShow: 1,
-        // mobileFirst: true,
-        // dots: false,
-        // arrow: true,
-        // infinite: true,
-        // speed: 500,
-        // autoplay: true,
-        // fade: true,
-        // lazyLoaded: true,
-        // lazyLoad: 'ondemand',
-        // ease: 'ease'
-
-        //centerMode: true,
-        //centerPadding: '60px',
+        //mobileFirst: true,
+        //dots: false,
+        infinite: true,
+        //fade: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
         slidesToShow: 1.08,
-        autoplay: false,
+        autoplay: true,
         arrows: false,
-        speed: 1500,
+        speed: 1000,
         rtl: true,
         cssEase: 'ease-out',
         responsive: [{
