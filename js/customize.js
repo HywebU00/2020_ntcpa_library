@@ -10,6 +10,7 @@ $(function() {
         lazyLoad: 'ondemand',
         slidesToShow: 1.08,
         autoplay: true,
+        autoplaySpeed: 10000,
         arrows: false,
         speed: 1000,
         rtl: true,

@@ -467,6 +467,10 @@
             @include make-md-column(6);
             @include make-lg-column(6);
             @include aspect-ratio(2, 1);
+            max-width: 485px;
+            @include screen('mobile'){
+                max-width: 100%;
+            }
             img{
                 width:100%;
                 height:auto;
