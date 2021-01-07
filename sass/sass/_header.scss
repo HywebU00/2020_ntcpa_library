@@ -437,11 +437,14 @@
     overflow: hidden;
     font-size: .938em;
     box-shadow: 0 2px 5px rgba(0,0,0, .4);
-    position:absolute;
-    right:0;
+    position:fixed;
+    right:calc((100% - 1100px) / 2);
     top:65px;
     z-index: 100;
     width: 280px;
+    @media screen and (max-width: 1100px){
+        right: 0;
+    }
     @include screen('mobile') {
         padding: 1.2em 1.6em;
         top:60px;
@@ -552,6 +555,9 @@
         }
         .form_grp{
             margin-top: 3px;
+            input[type="text"]{
+                width: 100%;
+            }
         }
         .form_grp, .check_grp{
             @include screen('mobile') {
@@ -561,6 +567,10 @@
         .btn_grp{
             padding:0;
             margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: .5em;
             @include screen('mobile') {
                 float: none;
                 display: block;
@@ -581,6 +591,7 @@
                 background: none;
                 border:none;
                 color: $primaryColor;
+                line-height: 1.5;
                 &:after{
                     content:"";
                     display:block;
@@ -602,6 +613,9 @@
                 background: none;
                 border:none;
                 color: $secondaryColor;
+                display: inline-block;
+                line-height: 1.5;
+
                 &:after{
                     content:"";
                     display:block;
